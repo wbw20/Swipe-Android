@@ -1,4 +1,6 @@
-package com.casehacks.swipe_android;
+package com.casehacks.swipe_android.views;
+
+import com.casehacks.swipe_android.R;
 
 import android.os.Bundle;
 import android.app.Activity;
