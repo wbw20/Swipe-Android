@@ -1,37 +1,28 @@
 package com.casehacks.swipe_android.util;
 
+import java.util.List;
 import java.util.Map;
 
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-public class GenericAdapter<T> extends BaseAdapter {
+public abstract class GenericAdapter<T> extends BaseAdapter {
 
-    Map<T, View> entities;
+    List<T> entities;
+    Map<T, View> views;
 
-	@Override
-	public int getCount() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+    @Override
+    public int getCount() {
+        return entities.size();
+    }
 
-	@Override
-	public Object getItem(int position) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    @Override
+    public Object getItem(int position) {
+        return entities.get(position);
+    }
 
-	@Override
-	public long getItemId(int position) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
 }
