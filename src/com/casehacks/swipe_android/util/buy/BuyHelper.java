@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.casehacks.swipe_android.model.Buy;
 import com.casehacks.swipe_android.rest.RestCall;
+import com.google.gson.reflect.TypeToken;
 
 import android.os.AsyncTask;
 import android.widget.ListView;
@@ -17,7 +18,7 @@ public class BuyHelper {
         class Fetch extends AsyncTask<Object, Integer, List<Buy>> {
             @Override
             protected List<Buy> doInBackground(Object... params) {
-                return RestCall.get("/buy", Buy.class);
+                return RestCall.get("/buy", new TypeToken<ArrayList<Buy>>(){});
             }
 
             @Override

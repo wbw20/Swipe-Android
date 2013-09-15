@@ -28,9 +28,8 @@ public class RestCall {
      * 
      * @return A list of the requested server entities.
      */
-    public static <T> ArrayList<T> get(String path, Class<T> clazz) {
+    public static <T> ArrayList<T> get(String path, TypeToken<?> token) {
         ArrayList<T> results = null;
-        TypeToken<ArrayList<T>> type = new TypeToken<ArrayList<T>>(){};
 
         try {
             URL url = new URL(host + path);
@@ -39,7 +38,7 @@ public class RestCall {
             connection.connect();
             InputStream in = connection.getInputStream();
             BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-            results = gson.fromJson(read(reader), type.getType());
+            results = gson.fromJson(read(reader), token.getType());
 
             connection.disconnect();
         } catch (IOException e) {
