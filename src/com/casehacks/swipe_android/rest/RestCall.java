@@ -39,7 +39,7 @@ public class RestCall {
             connection.connect();
             InputStream in = connection.getInputStream();
             BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-            results = gson.fromJson(reader.readLine(), type.getType());
+            results = gson.fromJson(read(reader), type.getType());
 
             connection.disconnect();
         } catch (IOException e) {
@@ -47,5 +47,17 @@ public class RestCall {
         }
 
         return results;
+    }
+
+    private static String read(BufferedReader reader) throws IOException {
+        String output = "";
+        String line = reader.readLine();
+
+        while(line != null && line != "") {
+            output = output + line;
+            line = reader.readLine();
+        }
+
+        return output;
     }
 }
