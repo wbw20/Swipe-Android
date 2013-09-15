@@ -11,6 +11,14 @@ public abstract class GenericAdapter<T> extends BaseAdapter {
     List<T> entities;
     Map<T, View> views;
 
+    protected List<T> entities() {
+        return entities;
+    }
+
+    protected Map<T, View> views() {
+        return views;
+    }
+
     @Override
     public int getCount() {
         return entities.size();

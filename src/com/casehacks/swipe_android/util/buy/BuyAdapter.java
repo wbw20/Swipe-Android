@@ -8,10 +8,12 @@ import com.casehacks.swipe_android.util.GenericAdapter;
 
 public class BuyAdapter extends GenericAdapter<Buy> {
 
-	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        if (views().get(entities().get(position)) == null) {
+            
+        }
 
+        return views().get(entities().get(position));
+    }
 }
