@@ -36,6 +36,8 @@ public abstract class GenericAdapter<T> extends BaseAdapter {
         for (T item : toAdd) {
             entities.add(item);
         }
+
+        notifyDataSetChanged();
     }
 
     @Override
