@@ -20,7 +20,7 @@ public class BuyAdapter extends GenericAdapter<Buy> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (views().get(entities().get(position)) == null) {
-            convertView = LayoutInflater.from(context).inflate(R.layout.buy_list_item, parent);
+            convertView = LayoutInflater.from(context).inflate(R.layout.buy_list_item, null);
         }
 
         return views().get(entities().get(position));
