@@ -1,5 +1,7 @@
 package com.casehacks.swipe_android.util.buy;
 
+import java.util.List;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +13,9 @@ import com.casehacks.swipe_android.util.GenericAdapter;
 
 public class BuyAdapter extends GenericAdapter<Buy> {
 
-    public BuyAdapter(Context context) { super(context); }
+    public BuyAdapter(Context context, List<Buy> buys) {
+        super(context, buys);
+    }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {

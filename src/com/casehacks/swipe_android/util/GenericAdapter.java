@@ -13,8 +13,12 @@ public abstract class GenericAdapter<T> extends BaseAdapter {
     Map<T, View> views;
     protected Context context;
 
-    public GenericAdapter(Context context) {
+    public GenericAdapter(Context context, List<T> list) {
         this.context = context;
+
+        for (T item : list) {
+            entities.add(item);
+        }
     }
 
     protected List<T> entities() {

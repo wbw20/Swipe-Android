@@ -28,8 +28,8 @@ public class RestCall {
      * 
      * @return A list of the requested server entities.
      */
-    public static <T> T get(String path, Class<T> clazz) {
-        T results = null;
+    public static <T> ArrayList<T> get(String path, Class<T> clazz) {
+        ArrayList<T> results = null;
         TypeToken<ArrayList<T>> type = new TypeToken<ArrayList<T>>(){};
 
         try {
