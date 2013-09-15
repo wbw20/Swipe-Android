@@ -3,6 +3,7 @@ package com.casehacks.swipe_android.util;
 import java.util.List;
 import java.util.Map;
 
+import android.content.Context;
 import android.view.View;
 import android.widget.BaseAdapter;
 
@@ -10,6 +11,11 @@ public abstract class GenericAdapter<T> extends BaseAdapter {
 
     List<T> entities;
     Map<T, View> views;
+    protected Context context;
+
+    public GenericAdapter(Context context) {
+        this.context = context;
+    }
 
     protected List<T> entities() {
         return entities;
