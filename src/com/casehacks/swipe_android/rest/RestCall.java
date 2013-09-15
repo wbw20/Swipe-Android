@@ -13,7 +13,7 @@ import com.google.gson.reflect.TypeToken;
 
 public class RestCall {
 
-    private final static String host = "http://209.20.92.28:3000/";
+    private final static String host = "http://209.20.92.28:8080/";
     private static Gson gson = new Gson();
 
     /**
