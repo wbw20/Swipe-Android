@@ -1,5 +1,7 @@
 package com.casehacks.swipe_android.util;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -9,8 +11,8 @@ import android.widget.BaseAdapter;
 
 public abstract class GenericAdapter<T> extends BaseAdapter {
 
-    List<T> entities;
-    Map<T, View> views;
+    ArrayList<T> entities = new ArrayList<T>();
+    HashMap<T, View> views = new HashMap<T, View>();
     protected Context context;
 
     public GenericAdapter(Context context, List<T> list) {
