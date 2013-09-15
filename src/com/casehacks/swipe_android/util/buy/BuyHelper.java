@@ -17,9 +17,12 @@ public class BuyHelper {
         class Fetch extends AsyncTask<Object, Integer, List<Buy>> {
             @Override
             protected List<Buy> doInBackground(Object... params) {
-                List<Buy> buys = RestCall.get("/buy", Buy.class);
-                adapter.add(buys);
-                return buys;
+                return RestCall.get("/buy", Buy.class);
+            }
+
+            @Override
+            protected void onPostExecute(List<Buy> list) {
+                adapter.add(list);
             }
         }
 
