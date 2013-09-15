@@ -21,6 +21,7 @@ public class BuyAdapter extends GenericAdapter<Buy> {
     public View getView(int position, View convertView, ViewGroup parent) {
         if (views().get(entities().get(position)) == null) {
             convertView = LayoutInflater.from(context).inflate(R.layout.buy_list_item, null);
+            views().put(entities().get(position), convertView);
         }
 
         return views().get(entities().get(position));
