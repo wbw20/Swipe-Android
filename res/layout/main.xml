@@ -19,14 +19,12 @@
 
         <Button
             android:id="@+id/buy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/buy"/>
+            android:text="@string/buy"
+            style="@style/button" />
 
         <Button
             android:id="@+id/sell"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sell"/>
+            android:text="@string/sell"
+            style="@style/button" />
     </LinearLayout>
 </RelativeLayout>
