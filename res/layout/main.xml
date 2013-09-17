@@ -15,7 +15,8 @@
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:layout_below="@id/app_name">
+        android:layout_below="@id/app_name"
+        style="@style/background">
 
         <Button
             android:id="@+id/buy"
