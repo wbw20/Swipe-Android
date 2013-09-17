@@ -11,8 +11,31 @@
 
     <ListView
         android:id="@+id/list"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_weight="1"
+        style="@style/base">
     </ListView>
+
+    <LinearLayout 
+        android:layout_height="80dip"
+        style="@style/background">
+
+        <EditText
+            android:id="@+id/name"
+            android:inputType="text"
+            android:hint="@string/name"
+            style="@style/text" />
+
+        <EditText
+            android:id="@+id/price"
+            android:inputType="numberDecimal"
+            android:hint="@string/price"
+            style="@style/text" />
+
+        <Button
+            android:id="@+id/offer"
+            android:text="@string/offer"
+            android:layout_height="45dip"
+            style="@style/button" />
+    </LinearLayout>
 
 </LinearLayout>
