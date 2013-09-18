@@ -29,4 +29,21 @@ public class BuyHelper {
 
         new Fetch().execute(new Object());
     }
+
+    public static void post(final ListView view, Buy buy) {
+        class Post extends AsyncTask<Buy, Integer, Buy> {
+            @Override
+            protected Buy doInBackground(Buy... params) {
+                return RestCall.post("/buy", params[0]);
+            }
+
+            @Override
+            protected void onPostExecute(Buy result) {
+                ArrayList<Buy> list = new ArrayList<Buy>(); list.add(result);
+                ((BuyAdapter)view.getAdapter()).add(list);
+            }
+        }
+
+        new Post().execute(buy);
+    }
 }

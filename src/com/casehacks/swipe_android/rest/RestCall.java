@@ -58,8 +58,9 @@ public class RestCall {
      * @param data The entity which will be posted.
      * @return The entity as it exists after going through the server.
      */
-    public static Object post(String path, Object data) {
-        Object result = null;
+    @SuppressWarnings("unchecked")
+	public static <T> T post(String path, T data) {
+        T result = null;
         try {
             URL url = new URL(host + path);
             HttpURLConnection connection = (HttpURLConnection)url.openConnection();
@@ -71,7 +72,7 @@ public class RestCall {
             os.flush();
             BufferedReader reader = new BufferedReader(new InputStreamReader(
                     connection.getInputStream()));
-            result = gson.fromJson(reader.readLine(), data.getClass());
+            result = (T)gson.fromJson(reader.readLine(), data.getClass());
 
             connection.disconnect();
         } catch (IOException e) {
