@@ -21,7 +21,7 @@ public class Buy extends Activity {
             @Override
             public void onClick(View view) {
                 BuyHelper.post((ListView)findViewById(R.id.list), 
-                    new com.casehacks.swipe_android.model.Buy(text(R.id.name), num(R.id.price)));
+                    new com.casehacks.swipe_android.model.Buy(text(R.id.offer_name), num(R.id.offer_price)));
             }
         });
 
