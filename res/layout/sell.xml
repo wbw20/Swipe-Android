@@ -16,7 +16,7 @@
         style="@style/base">
     </ListView>
 
-    <LinearLayout 
+    <LinearLayout
         android:layout_height="80dip"
         style="@style/background">
 
