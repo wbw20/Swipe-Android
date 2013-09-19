@@ -36,12 +36,6 @@ public class BuyHelper {
             protected Buy doInBackground(Buy... params) {
                 return RestCall.post("/buy", params[0]);
             }
-
-            @Override
-            protected void onPostExecute(Buy result) {
-                ArrayList<Buy> list = new ArrayList<Buy>(); list.add(result);
-                ((BuyAdapter)view.getAdapter()).add(list);
-            }
         }
 
         new Post().execute(buy);
