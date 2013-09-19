@@ -29,10 +29,10 @@ public class Buy extends Activity {
     }
 
     private String text(Integer id) {
-        return ((EditText)findViewById(id)).toString();
+        return ((EditText)findViewById(id)).getText().toString();
     }
 
     private Double num(Integer id) {
-        return Double.parseDouble(((EditText)findViewById(id)).toString());
+        return Double.parseDouble(((EditText)findViewById(id)).getText().toString());
     }
 }
