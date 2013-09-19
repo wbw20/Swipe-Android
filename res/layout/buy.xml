@@ -12,6 +12,7 @@
     <ListView
         android:id="@+id/list"
         android:layout_weight="1"
+        android:layout_height="0dip"
         style="@style/base">
     </ListView>
 

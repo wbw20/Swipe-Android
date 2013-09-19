@@ -6,7 +6,37 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:text="@string/sell"/>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_weight="1"
+        android:layout_height="0dip"
+        style="@style/base">
+    </ListView>
+
+    <LinearLayout 
+        android:layout_height="80dip"
+        style="@style/background">
+
+        <EditText
+            android:id="@+id/offer_name"
+            android:inputType="text"
+            android:hint="@string/name"
+            style="@style/text" />
+
+        <EditText
+            android:id="@+id/offer_price"
+            android:inputType="numberDecimal"
+            android:hint="@string/price"
+            style="@style/text" />
+
+        <Button
+            android:id="@+id/offer"
+            android:text="@string/offer"
+            android:layout_height="40dip"
+            style="@style/button" />
+    </LinearLayout>
 
 </LinearLayout>
