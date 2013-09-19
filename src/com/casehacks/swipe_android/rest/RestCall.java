@@ -72,7 +72,7 @@ public class RestCall {
             os.flush();
             BufferedReader reader = new BufferedReader(new InputStreamReader(
                     connection.getInputStream()));
-            result = (T)gson.fromJson(reader.readLine(), data.getClass());
+            result = (T)gson.fromJson(read(reader), data.getClass());
 
             connection.disconnect();
         } catch (IOException e) {
