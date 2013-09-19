@@ -14,5 +14,6 @@
     <string name="name">Name</string>
     <string name="price">Price</string>
     <string name="offer">Offer</string>
+    <string name="deal">Deal!</string>
 
 </resources>
