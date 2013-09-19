@@ -2,6 +2,7 @@ package com.casehacks.swipe_android.views;
 
 import com.casehacks.swipe_android.R;
 import com.casehacks.swipe_android.util.buy.BuyHelper;
+import com.casehacks.swipe_android.util.sell.SellHelper;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -25,7 +26,7 @@ public class Buy extends Activity {
             }
         });
 
-        BuyHelper.populate((ListView)findViewById(R.id.list));
+        SellHelper.populate((ListView)findViewById(R.id.list));
     }
 
     private String text(Integer id) {

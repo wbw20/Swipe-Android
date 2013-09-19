@@ -37,12 +37,6 @@ public class SellHelper {
             protected Sell doInBackground(Sell... params) {
                 return RestCall.post("/buy", params[0]);
             }
-
-            @Override
-            protected void onPostExecute(Sell result) {
-                ArrayList<Sell> list = new ArrayList<Sell>(); list.add(result);
-                ((SellAdapter)view.getAdapter()).add(list);
-            }
         }
 
         new Post().execute(sell);
